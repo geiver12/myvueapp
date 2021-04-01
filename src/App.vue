@@ -1,0 +1,51 @@
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <nav>
+      <ul>
+        <li>
+          <router-link to="/test">
+            Test
+          </router-link>
+          </li>
+        <li><router-link to="/">
+          User
+        </router-link >
+        </li>
+         <li><router-link to="/task">
+         Task
+        </router-link >
+        </li>
+      </ul>
+    </nav>
+    <hr>
+   <router-view></router-view>
+  </div>
+</template>
+
+<script>
+
+import Test from './components/test';
+import User from './components/user';
+import Task from './components/task';
+
+export default {
+  name: 'App',
+  components: {
+    Test,
+    User,
+    Task
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
